@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Event Example">
+        <div class="slds-p-around_medium lgc-bg">
+            Hello {name}
+        </div>
+        <div class="slds-p-around_medium lgc-bg">
+            <!-- <lightning-input type="text" value={name} label="Enter some text" onkeyup={changeHandler}></lightning-input> -->
+            <lightning-input type="text" value={name} name="name" label="Enter some text" onchange={changeHandler}></lightning-input>
+            <lightning-button label="Click Me" value="Click Me"  onclick={clickHandler}></lightning-button>
+        </div>        
+    </lightning-card>
+</template>

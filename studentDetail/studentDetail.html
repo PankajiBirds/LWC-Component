@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Student Detail">
+        <template for:each={studentDetail} for:item="student" for:index="index">
+            <!-- <p key={student.id}>
+               <lightning-formatted-text value={student.name}></lightning-formatted-text>   
+               <lightning-formatted-email value={student.email}></lightning-formatted-email>
+               <lightning-formatted-phone value={student.phone}></lightning-formatted-phone>
+            </p> -->
+            <lightning-layout key={student.id}>
+                <lightning-layout-item padding="around-small">
+                    <lightning-formatted-text value={student.name}></lightning-formatted-text>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <lightning-formatted-email value={student.email}></lightning-formatted-email>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <lightning-formatted-phone value={student.phone}></lightning-formatted-phone>
+                </lightning-layout-item>                
+            </lightning-layout>
+        </template>
+    </lightning-card>
+</template>

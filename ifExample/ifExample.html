@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="If Example">
+        <template if:true={message}>
+            <lightning-formatted-text value={message}></lightning-formatted-text>
+            <p>{message}</p>
+        </template>
+        <template if:false={error}>
+            <p>Error block execute</p>
+        </template>        
+        <template for:each={cities} for:item="city" for:index="index">
+            <p key={city}>
+                {index} &nbsp; {city}
+            </p>
+        </template>
+
+    </lightning-card>
+</template>
