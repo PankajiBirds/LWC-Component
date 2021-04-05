@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="ComboBox Example">
+        <lightning-combobox label="Select City"
+            options={cities}
+            onchange={changeHandler}
+            value={defaultCity}
+        >        
+        </lightning-combobox>
+        <p>Selected City : {selectedCity}</p>
+    </lightning-card>
+</template>

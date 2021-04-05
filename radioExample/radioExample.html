@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Radio Example">
+        <lightning-radio-group label="Select Gender"
+            options={gender}
+            value={defaultGender}
+            onchange={changeHandler}
+            required            
+            >
+        </lightning-radio-group>
+
+        <p> Gender : {selectedGender}</p>
+    </lightning-card>
+</template>
