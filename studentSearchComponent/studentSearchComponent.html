@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Student Search Example">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter Name" value={name} onchange={handleName}></lightning-input>
+            &nbsp;
+            <lightning-button label="Search" varient="brand" onclick={handleSearch}></lightning-button>
+        </div>
+        <div class="slds-m-around_medium">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={studentList} for:item="student">
+                        <tr key={student}>
+                            <td>{student.Name}</td>
+                            <td>{student.Last_Name__c}</td>
+                            <td>{student.Email__c}</td>
+                            <td>{student.Contact__c}</td>                            
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>
