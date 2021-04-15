@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  title="Create Account" icon-name="custom:custom7">
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter Account Name" value={account.Name} onchange={handleName}></lightning-input>            
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input type="number" label="Enter Account Number" value={account.AccountNumber} onchange={handleAccountNumber}></lightning-input>   
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-input type="email" label="Enter Account Email" value={account.Email__c} onchange={handleEmail}></lightning-input>            
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning-button label="Create Account" varient="brand" onclick={handleCreateAccount} ></lightning-button>
+        </div>
+    </lightning-card>
+</template>
