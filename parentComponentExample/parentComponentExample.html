@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Child to Parent Example" icon-name="custom:custom101">
+        <div class="slds-m-around_medium">
+            <p><b>Student Id : {id}</b></p>
+            <p><b>Student Name : {name}</b></p>
+            <p><b>Student Email : {studentData.email}</b></p>
+            <p><b>Student Contact : {studentData.contact}</b></p>
+        </div>
+        <div class="slds-m-around_medium">
+            <c-child-component-example onsimpleevent={handleSimpleEvent}></c-child-component-example>
+        </div>
+    </lightning-card>
+</template>
